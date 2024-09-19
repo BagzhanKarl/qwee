@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <title>Регистрация | AssemCRM</title>
+    <!-- [Meta] -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="../assets/images/favicon-1.svg" type="image/x-icon">
+    <link href="../../../css2-1?family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/fonts/phosphor/duotone/style-1.css">
+    <link rel="stylesheet" href="../assets/fonts/tabler-icons.min-1.css">
+    <link rel="stylesheet" href="../assets/fonts/feather-1.css">
+    <link rel="stylesheet" href="../assets/fonts/fontawesome-1.css">
+    <link rel="stylesheet" href="../assets/fonts/material-1.css">
+    <link rel="stylesheet" href="../assets/css/style-1.css" id="main-style-link">
+    <link rel="stylesheet" href="../assets/css/style-preset-1.css">
+</head>
+<body data-pc-preset="preset-1" data-pc-sidebar-theme="light" data-pc-sidebar-caption="true" data-pc-direction="ltr"
+      data-pc-theme="light">
+<div class="loader-bg">
+    <div class="loader-track">
+        <div class="loader-fill"></div>
+    </div>
+</div>
+<div class="auth-main v1">
+    <div class="auth-wrapper">
+        <div class="auth-form">
+            <div class="card my-5">
+                <div class="card-body">
+                    <div class="step-1">
+                        <div class="text-center">
+                            <img src="../assets/images/authentication/img-auth-register.png" alt="images"
+                                 class="img-fluid mb-3">
+                            <h4 class="f-w-500 mb-1">Давайте знакомимся ;)</h4>
+                            </p>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" autocomplete="off" placeholder="Как вас зовут">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" id="phone" autocomplete="off" placeholder="Номер телефона">
+                        </div>
+                        <div class="mb-3">
+                            <input type="password" class="form-control" autocomplete="off" placeholder="Придумайте пароль">
+                        </div>
+                        <div class="d-flex mt-1 justify-content-between">
+                            <div class="form-check">
+                                <input class="form-check-input input-primary" type="checkbox" id="customCheckc1" checked="">
+                                <label class="form-check-label text-muted" for="customCheckc1">Я согласен со всеми Условиями и положениями</label>
+                            </div>
+                        </div>
+                        <div class="d-grid mt-4">
+                            <button type="button" id="next" class="btn btn-primary">Продолжить</button>
+                        </div>
+                    </div>
+                    <div class="step-2" style="display: none">
+                        <div class="text-center">
+                            <img src="../assets/images/authentication/img-auth-register.png" alt="images"
+                                 class="img-fluid mb-3">
+                            <h4 class="f-w-500 mb-1">Расскажите нам о своем бизнесе ;)</h4>
+                            </p>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control"  autocomplete="off" placeholder="Название вашего бизнеса">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="">Чем вы занимаетесь?</label>
+                            <select name="" id="" class="form-control">
+                                <option value="1">Салон красоты</option>
+                                <option value="2">Барбершоп</option>
+                                <option value="3">Массажный салон</option>
+                                <option value="4">Интернет магазин</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="">Ваш роль в бизнесе</label>
+                            <select name="" class="form-control">
+                                <option value="1">CEO / Основатель</option>
+                                <option value="2">Руководитель</option>
+                                <option value="3">Менеджер по продажам</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <button class="btn btn-primary w-100" >Завершить регистрацию</button>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- [ Main Content ] end -->
+<!-- Required Js -->
+<script src="../assets/js/plugins/popper.min-1.js"></script>
+<script src="../assets/js/plugins/simplebar.min-1.js"></script>
+<script src="../assets/js/plugins/bootstrap.min-1.js"></script>
+<script src="../assets/js/fonts/custom-font-1.js"></script>
+<script src="../assets/js/pcoded-1.js"></script>
+<script src="../assets/js/plugins/feather.min-1.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/imask/7.6.1/imask.min.js" integrity="sha512-+3RJc0aLDkj0plGNnrqlTwCCyMmDCV1fSYqXw4m+OczX09Pas5A/U+V3pFwrSyoC1svzDy40Q9RU/85yb/7D2A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+    layout_change('light');
+    layout_sidebar_change('light');
+    change_box_container('false');
+    layout_caption_change('true');
+    layout_rtl_change('false');
+    preset_change('preset-1');
+</script>
+<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+<script>
+    $(document).ready(function (){
+        $('#next').on('click', function (){
+            $('.step-1').hide();
+            $('.step-2').show();
+        })
+    })
+    IMask(
+        document.getElementById('phone'),
+        {
+            mask: '+{7} (000) 000-00-00'
+        }
+    )
+</script>
+</body>
+<!-- [Body] end -->
+</html>
